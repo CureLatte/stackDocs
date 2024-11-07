@@ -174,6 +174,7 @@ export default TestController
 <br>
 
 ### Params/ Query 구분 
+***
 
 `Controller` 에서 `Routing` 분기로 자주 사용하는   
 `Params` 와 `Query` 는 `@Params`,  `@Query` 으로 구분한다.  

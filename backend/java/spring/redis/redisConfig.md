@@ -149,6 +149,8 @@ Redis 는 Key-Value 형태로 구현되어 있고 내부 여러가지 자료구�
 
 각 자료구조별 `Operation` 을 얻어 사용하거나 `RedisTemplate` 의 `Method` 를 이용하여 사용하면 된다.
 
+가장 자주 사용하는 자료구조만 간단하게 살펴 보면 다음과 같다.
+
 ### String 
 ```java
 
@@ -205,9 +207,6 @@ Redis 는 Key-Value 형태로 구현되어 있고 내부 여러가지 자료구�
         
         String value3 = operation.rightPop("key"); // "value3", Redis: key: [ "value1", "value2"]
         
-        // VALUE 조회
-        String cachedValue = operation.get("key", 0);
-           
     }
     
 }

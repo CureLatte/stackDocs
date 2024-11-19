@@ -51,3 +51,23 @@ class testCase{
 `MOCK` 으로 대체를 하려면 `@MockBean` 을 이용해야한다.
 
 
+
+## 수정후 코드
+```java
+@SpringBootTest
+@ExtendWith(MockitoExtension.class)
+class testCase{
+@MockBean // 호출 확인해야하는 객체
+EventPublish eventPublish;
+
+    @Test 
+    public void 테스트_함수(){
+        // 테스트 작성
+        
+        // THEN
+        verify(eventPublish).확인_메소드(any(INPUT)); // 호출 확인!
+    }
+}
+
+```
+
